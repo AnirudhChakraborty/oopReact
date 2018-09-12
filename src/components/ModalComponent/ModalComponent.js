@@ -55,7 +55,18 @@ class ModalComponet extends Component {
             <ModalFooter> {modalFooter} </ModalFooter>
             </Modal>
         );
-    }
+    }   
+}
+
+ModalComponet.defaultProps = {
+    isVisible : false,
+    modalHeader : '',
+    modalBody : '',
+    modalFooter : '',
+    showBackdrop : true,
+    screenSize : 'sm',
+    onClosed : null,
+    canBeCancelled : true
 }
 
 export default ModalComponet;
