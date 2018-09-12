@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import * as data from './utils/data';
+
 import GridTable from "./components/GridTable/GridTable";
+import ButtonComponent from "./components/ButtonComponent/ButtonComponent";
+
+import * as tableData from './utils/table-data';
+import * as buttonData from './utils/button-data';
 
 class App extends Component {
+
+  onButtonClick(){
+   console.log('test');
+  }
+
   render() {
     return (
       <div className="App">
@@ -16,7 +25,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <div className="container">
-          <GridTable header={data.header} data={data.data} tableProperties={data.tableProperties} />
+          <ButtonComponent config={buttonData.config} onClick={this.onButtonClick}>Test Button</ButtonComponent>
+          <GridTable header={tableData.header} data={tableData.tableData} tableProperties={tableData.tableProperties} />
         </div>
       </div>
     );

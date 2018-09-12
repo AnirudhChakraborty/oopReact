@@ -1,4 +1,12 @@
-export const data = [
+/**
+ * Table data generated to be passed on GridTable Component
+ * tableData has all the data to be displayed on table body
+ * header has all header values to be displayed on table head
+ * tableProperties has all the table properties to alter table
+ */
+
+
+export const tableData = [
   {
     loyaltyNo: '001',
     firstName: 'Test',
@@ -26,9 +34,8 @@ export const header = {
   address: 'Address'
 };
 
-
+// Pass in a Component to override default element
 export const tableProperties = {
-  // Pass in a Component to override default element
   size: 'lg',
   bordered: true,
   borderless: false,
