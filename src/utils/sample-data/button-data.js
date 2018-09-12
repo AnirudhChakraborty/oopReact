@@ -9,5 +9,6 @@ export const config = {
   color: 'primary', // default: 'secondary'
   disabled: false,
   size: 'md',
-  outline: false
+  outline: false,
+  className: '' // here you can pass css classes to alter view of button
 };
