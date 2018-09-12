@@ -11,7 +11,7 @@ import * as buttonData from './utils/sample-data/button-data';
 class App extends Component {
 
   onButtonClick() {
-    console.log('test');
+    alert('Test');
   }
 
   render() {

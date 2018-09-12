@@ -27,7 +27,7 @@ export const tableData = [
           iconType: 'class',
           icon: 'fa fa-edit',
           onClick: function () {
-            alert(JSON.stringify(tableData[0].data));
+            alert('Editing: ' + tableData[0].data.loyaltyNo);
           },
           styleClass: 'table-action-edit'
         },
@@ -35,7 +35,7 @@ export const tableData = [
           iconType: 'class',
           icon: 'fa fa-trash',
           onClick: function () {
-            alert(JSON.stringify(tableData[0].data));
+            alert('Deleting: ' + tableData[0].data.loyaltyNo);
           },
           styleClass: ''
         }
@@ -56,7 +56,7 @@ export const tableData = [
           iconType: 'class',
           icon: 'fa fa-edit',
           onClick: function () {
-            alert(JSON.stringify(tableData[1].data));
+            alert('Editing: ' + tableData[1].data.loyaltyNo);
           },
           styleClass: 'table-action-edit'
         },
@@ -64,7 +64,7 @@ export const tableData = [
           iconType: 'class',
           icon: 'fa fa-trash',
           onClick: function () {
-            alert(JSON.stringify(tableData[1].data));
+            alert('Deleting: ' + tableData[1].data.loyaltyNo);
           },
           styleClass: ''
         }
