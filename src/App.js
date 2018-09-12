@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+import TextField from './components/TextField/TextField'
+
+
 import ModalComponent from './components/ModalComponent'
-import { Button} from 'reactstrap';
+import {Button} from 'reactstrap';
 
 import GridTable from "./components/GridTable/GridTable";
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent";
@@ -33,10 +37,12 @@ class App extends Component {
                      columnWidth={tableData.widthOfColumns}
                      tableProperties={tableData.tableProperties}
           />
+          <TextField labeltext="User Name"/>
         </div>
       </div>
     );
   }
+
 }
 
 export default App;

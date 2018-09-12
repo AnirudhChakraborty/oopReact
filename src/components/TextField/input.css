@@ -1,0 +1,11 @@
+.input {
+    width: 300px !important;
+    margin-top: 25px;
+    margin-left: -72px;
+}
+.label{
+    font-size: 15px;
+}
+.input-container {
+    display: flex;
+}
