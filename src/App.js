@@ -11,18 +11,9 @@ import * as tableData from './utils/sample-data/table-data';
 import * as buttonData from './utils/sample-data/button-data';
 
 class App extends Component {
-<<<<<<< HEAD
-  constructor(props) {
-    super(props)
-    this.state = {  
-      isVisible : false
-    }
-
-=======
 
   onButtonClick() {
     alert('Test');
->>>>>>> 9089e5a218fb8aeeac47a76641b0b77c5a156f77
   }
 
   render() {
@@ -30,11 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-<<<<<<< HEAD
-          <img src={logo} className="App-logo" alt="logo" onClick={this.showModal}/>
-=======
           <img src={logo} className="App-logo" alt="logo"/>
->>>>>>> 9089e5a218fb8aeeac47a76641b0b77c5a156f77
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
