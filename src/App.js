@@ -4,11 +4,9 @@ import './App.css';
 import ModalComponent from './components/ModalComponent'
 import { Button} from 'reactstrap';
 
-import GridTable from "./components/GridTable/GridTable";
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent";
-
-import * as tableData from './utils/sample-data/table-data';
 import * as buttonData from './utils/sample-data/button-data';
+import TableDisplay from "./containers/TableDisplay/TableDisplay";
 
 class App extends Component {
 
@@ -28,11 +26,8 @@ class App extends Component {
         </p>
         <div className="container">
           <ButtonComponent config={buttonData.config} onClick={this.onButtonClick}>Test Button</ButtonComponent>
-          <GridTable header={tableData.header}
-                     data={tableData.tableData}
-                     columnWidth={tableData.widthOfColumns}
-                     tableProperties={tableData.tableProperties}
-          />
+          <br/>
+          <TableDisplay/>
         </div>
       </div>
     );
