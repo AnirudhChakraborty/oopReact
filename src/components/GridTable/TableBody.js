@@ -15,12 +15,23 @@ export default class TableBody extends Component {
         const value = data[key];
         let iconsToDisplay = [];
         for (let actionKey in value) {
-          if (value[actionKey].iconType === 'class') {
-            iconsToDisplay.push(
-              <span className={value[actionKey].styleClass} key={actionKey} onClick={value[actionKey].onClick}>
-                <i className={value[actionKey].icon}></i>
-              </span>
-            );
+          switch (value[actionKey].iconType) {
+            case 'class':
+              iconsToDisplay.push(
+                <span className={value[actionKey].styleClass} key={actionKey} onClick={value[actionKey].onClick}>
+                  <i className={value[actionKey].icon}></i>
+                </span>
+              );
+              break;
+            case 'image':
+              iconsToDisplay.push(
+                <span className={value[actionKey].styleClass} key={actionKey} onClick={value[actionKey].onClick}>
+                  <img src={value[actionKey].icon} alt={actionKey}/>
+                </span>
+              );
+              break;
+            default:
+              break;
           }
         }
         dataToDisplay.push(
