@@ -5,8 +5,8 @@ import './App.css';
 import GridTable from "./components/GridTable/GridTable";
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent";
 
-import * as tableData from './utils/table-data';
-import * as buttonData from './utils/button-data';
+import * as tableData from './utils/sample-data/table-data';
+import * as buttonData from './utils/sample-data/button-data';
 
 class App extends Component {
 
