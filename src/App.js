@@ -8,11 +8,9 @@ import TextField from './components/TextField/TextField'
 import ModalComponent from './components/ModalComponent'
 import {Button} from 'reactstrap';
 
-import GridTable from "./components/GridTable/GridTable";
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent";
-
-import * as tableData from './utils/sample-data/table-data';
 import * as buttonData from './utils/sample-data/button-data';
+import TableDisplay from "./containers/TableDisplay/TableDisplay";
 
 class App extends Component {
 
@@ -21,7 +19,6 @@ class App extends Component {
   }
 
   render() {
-    let {isVisible} = this.state
     return (
       <div className="App">
         <header className="App-header">
@@ -39,6 +36,8 @@ class App extends Component {
                      tableProperties={tableData.tableProperties}
           />
           <TextField labeltext="User Name"/>
+          <br/>
+          <TableDisplay/>
         </div>
       </div>
     );
