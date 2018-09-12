@@ -20,13 +20,13 @@ export default class GridTable extends Component {
    */
 
   render() {
-    const {data, header, tableProperties} = this.props;
+    const {data, header, tableProperties, columnWidth} = this.props;
     return (
       <Table {...tableProperties}>
-        <TableHeader header={header}/>
+        <TableHeader widthOfColumn={columnWidth} header={header}/>
         <tbody>
         {data.map((item, key) => (
-          <TableBody key={key} data={item}/>
+          <TableBody widthOfColumn={columnWidth} key={key} data={item}/>
         ))}
         </tbody>
       </Table>
@@ -37,5 +37,6 @@ export default class GridTable extends Component {
 GridTable.propTypes = {
   data: PropTypes.array.isRequired,
   header: PropTypes.object.isRequired,
-  tableProperties: PropTypes.object
+  tableProperties: PropTypes.object,
+  columnWidth: PropTypes.object
 };

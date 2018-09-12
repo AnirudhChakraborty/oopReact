@@ -7,17 +7,17 @@ export default class TableHeader extends Component {
    */
 
   render() {
-    const {header} = this.props; // pull out header props to a variable
+    const {header, widthOfColumn} = this.props; // pull out header props to a variable
     let headerToDisplay = []; // array to save header display values
     // Loops through Object and creates html tag for it
     for (let key in header) {
-      headerToDisplay.push(<th key={key}>{header[key]}</th>);
+      headerToDisplay.push(<th width={widthOfColumn[key] + '%'} key={key}>{header[key]}</th>);
     }
     return (
       <thead>
-        <tr>
-          {headerToDisplay}
-        </tr>
+      <tr className={'test'}>
+        {headerToDisplay}
+      </tr>
       </thead>
     );
   }

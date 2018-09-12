@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -10,15 +10,15 @@ import * as buttonData from './utils/sample-data/button-data';
 
 class App extends Component {
 
-  onButtonClick(){
-   console.log('test');
+  onButtonClick() {
+    console.log('test');
   }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo" alt="logo"/>
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
@@ -26,7 +26,11 @@ class App extends Component {
         </p>
         <div className="container">
           <ButtonComponent config={buttonData.config} onClick={this.onButtonClick}>Test Button</ButtonComponent>
-          <GridTable header={tableData.header} data={tableData.tableData} tableProperties={tableData.tableProperties} />
+          <GridTable header={tableData.header}
+                     data={tableData.tableData}
+                     columnWidth={tableData.widthOfColumns}
+                     tableProperties={tableData.tableProperties}
+          />
         </div>
       </div>
     );
