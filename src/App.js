@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import * as data from './data';
+import * as data from './utils/data';
 import GridTable from "./components/GridTable/GridTable";
 
 class App extends Component {
@@ -15,7 +15,9 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <GridTable header={data.header} data={data.data} tableProperties={data.tableProperties} />
+        <div className="container">
+          <GridTable header={data.header} data={data.data} tableProperties={data.tableProperties} />
+        </div>
       </div>
     );
   }

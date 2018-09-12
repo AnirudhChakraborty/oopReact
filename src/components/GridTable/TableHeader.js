@@ -1,28 +1,23 @@
 import React, {Component} from 'react';
 
-export default class TableHeader extends Component{
-  constructor(){
-    super();
-    this.state = {
-      tableHeaders: []
-    }
-  }
+export default class TableHeader extends Component {
 
-  componentWillReceiveProps(nextProps){
-    if(nextProps.header){
-      const header = nextProps.header;
-      let arrayOfHeaderName = [];
-      for(let key in header){
-        arrayOfHeaderName.push({key: header[key]});
-      }
-      this.setState({tableHeaders: arrayOfHeaderName});
-    }
-  }
+  /**
+   * Accepts Object of headers and prepares an array to display
+   */
 
-  render(){
-    return(
+  render() {
+    const {header} = this.props; // pull out header props to a variable
+    let headerToDisplay = []; // array to save header display values
+    // Loops through Object and creates html tag for it
+    for (let key in header) {
+      headerToDisplay.push(<th key={key}>{header[key]}</th>);
+    }
+    return (
       <thead>
-
+        <tr>
+          {headerToDisplay}
+        </tr>
       </thead>
     );
   }

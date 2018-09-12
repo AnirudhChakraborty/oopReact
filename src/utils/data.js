@@ -5,10 +5,15 @@ export const data = [
     lastName: 'User',
     mobile: '0987654321',
     email: 'test@gmail.com',
-    address: {
-      city: 'Pune',
-      state: 'Maharashtra'
-    }
+    address: 'Wakad - Pune, Maharashtra'
+  },
+  {
+    loyaltyNo: '002',
+    firstName: 'Test',
+    lastName: 'User 2',
+    mobile: '0987654321',
+    email: 'test2@gmail.com',
+    address: 'Viman Nagar - Pune, Maharashtra'
   }
 ];
 
