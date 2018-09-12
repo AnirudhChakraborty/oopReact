@@ -17,7 +17,6 @@ class App extends Component {
   }
 
   render() {
-    let {isVisible} = this.state
     return (
       <div className="App">
         <header className="App-header">
