@@ -26,7 +26,7 @@ export default class GridTable extends Component {
         <TableHeader widthOfColumn={columnWidth} header={header}/>
         <tbody>
         {data.map((item, key) => (
-          <TableBody widthOfColumn={columnWidth} key={key} data={item}/>
+          <TableBody styleClass={item.styleClass} widthOfColumn={columnWidth} key={key} data={item.data}/>
         ))}
         </tbody>
       </Table>

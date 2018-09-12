@@ -7,12 +7,12 @@ export default class TableBody extends Component {
    */
 
   render() {
-    const {data, widthOfColumn} = this.props; // pull out tableData props to a variable
+    const {data, widthOfColumn, styleClass} = this.props; // pull out tableData props to a variable
     let dataToDisplay = []; // array to save tableData display values
     // Loops through Object and creates html tag for it
-    for (let key in data.data) {
+    for (let key in data) {
       if (key === 'actions') {
-        const value = data.data[key];
+        const value = data[key];
         let iconsToDisplay = [];
         for (let actionKey in value) {
           if (value[actionKey].iconType === 'class') {
@@ -27,11 +27,11 @@ export default class TableBody extends Component {
           <td width={widthOfColumn[key] + '%'} key={key}>{iconsToDisplay}</td>
         );
       } else {
-        dataToDisplay.push(<td width={widthOfColumn[key] + '%'} key={key}>{data.data[key]}</td>);
+        dataToDisplay.push(<td width={widthOfColumn[key] + '%'} key={key}>{data[key]}</td>);
       }
     }
     return (
-      <tr>
+      <tr className={styleClass}>
         {dataToDisplay}
       </tr>
     );
