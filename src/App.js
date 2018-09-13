@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+import TextField from './components/TextField/TextField'
+
+
 import ModalComponent from './components/ModalComponent'
-import { Button} from 'reactstrap';
+import {Button} from 'reactstrap';
 
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent";
 import * as buttonData from './utils/sample-data/button-data';
@@ -26,12 +30,19 @@ class App extends Component {
         </p>
         <div className="container">
           <ButtonComponent config={buttonData.config} onClick={this.onButtonClick}>Test Button</ButtonComponent>
+          <GridTable header={tableData.header}
+                     data={tableData.tableData}
+                     columnWidth={tableData.widthOfColumns}
+                     tableProperties={tableData.tableProperties}
+          />
+          <TextField labeltext="User Name"/>
           <br/>
           <TableDisplay/>
         </div>
       </div>
     );
   }
+
 }
 
 export default App;
